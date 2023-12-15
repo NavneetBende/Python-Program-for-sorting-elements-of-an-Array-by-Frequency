@@ -1,0 +1,9 @@
+from collections import Counter
+from itertools import repeat, chain
+ini_list = [10, 20, 30, 40, 40, 50, 50, 50]
+
+# sorting on bais of frequency of elements
+result = list(chain.from_iterable(repeat(i, c) for i, c in Counter(ini_list).most_common()))
+
+# printing final result
+print(str(result))
